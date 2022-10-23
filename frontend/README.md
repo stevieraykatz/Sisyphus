@@ -2,7 +2,7 @@
 
 1. Init the frontend  (do this only one time)  
 2.1 Go inside `frontend` directory.  
-2.1 From root run `yarn install`, to install all deps.  
+2.1 Run `yarn install`, to install all deps.  
 
 2. Deploy the contract  
 2.1 Go inside `chain` directory.  
