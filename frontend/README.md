@@ -13,7 +13,7 @@
 
 3. Import contract ABI and Address into frontend  
 2.1 Go inside `frontend` directory.  
-3.1 Run `yarn run contracts:import-contracts`.
+3.1 Run `yarn run contracts:import`.
 
 4. Run the frontend  
 Run `yarn start`  
