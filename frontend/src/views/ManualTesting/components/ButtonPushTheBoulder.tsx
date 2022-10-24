@@ -7,19 +7,19 @@ export const ButtonPushTheBoulder = () => {
 
   // Contract - Read
   const currentPrice = useContractRead({
-    addressOrName: contractAddress,
-    contractInterface: contractABI,
+    address: contractAddress,
+    abi: contractABI,
     functionName: 'currentPrice',
   });
 
   // Contract-  Write
   const pushPrepare = usePrepareContractWrite({
-    addressOrName: contractAddress,
-    contractInterface: contractABI,
+    address: contractAddress,
+    abi: contractABI,
     functionName: 'pushTheBoulder',
     enabled: currentPrice.isFetched,
     overrides: {
-      value: currentPrice.data || '0',
+      value: currentPrice.data,
     }
   });
   const push = useContractWrite(pushPrepare.config);

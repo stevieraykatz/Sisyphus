@@ -13,7 +13,7 @@ const formatCurrentPrice = (bigNum: ethers.BigNumberish) => {
 // Type
 type GameState = {
   currentPrice: null | {
-    bigNumber: ethers.BigNumberish,
+    bigNumber: ethers.BigNumber,
     ethPretty: string,
   },
   currentWinner: null | string,
@@ -34,8 +34,8 @@ export const DebugGame = () => {
 
   /** Contract - Read */
   const currentPrice = useContractRead({
-    addressOrName: contractAddress,
-    contractInterface: contractABI,
+    address: contractAddress,
+    abi: contractABI,
     functionName: 'currentPrice',
     onSuccess(data) {
       setGameState(prev => ({
@@ -50,8 +50,8 @@ export const DebugGame = () => {
 
   /** Contract - Read */
   const currentWinner = useContractRead({
-    addressOrName: contractAddress,
-    contractInterface: contractABI,
+    address: contractAddress,
+    abi: contractABI,
     functionName: 'currentWinner',
     onSuccess: (data) => { setGameState(prev => ({ ...prev, currentWinner: String(data) })); }
   });
