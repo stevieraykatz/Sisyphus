@@ -72,7 +72,9 @@ export const DebugGame = () => {
         {JSON.stringify({
           gameState,
           currentPriceFetchStatus: currentPrice.fetchStatus,
+          currentPriceStatus: currentPrice.status,
           currentWinnerFetchStatus: currentWinner.fetchStatus,
+          currentWinnerStatus: currentWinner.status,
         }, null, 4)}
       </pre>
       {/* 
